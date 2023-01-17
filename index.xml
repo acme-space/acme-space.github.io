@@ -20,8 +20,50 @@
       <pubDate>Tue, 17 Jan 2023 18:12:35 +0900</pubDate>
       
       <guid>https://acme-space.github.io/post/action-test/</guid>
-      <description>&lt;p&gt;action test&lt;/p&gt;
-</description>
+      <description>&lt;h3 id=&#34;steps&#34;&gt;steps&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ /acme-space% hugo new action-test.md 
+Content &amp;#34;~/acme-space/content/action-test.md&amp;#34; created
+
+$ /acme-space% vi content/post/action-test.md 
+
+$ /acme-space% hugo -D -F                 
+Start building sites … 
+hugo v0.109.0+extended darwin/amd64 BuildDate=unknown
+
+                   | EN  
+-------------------+-----
+  Pages            | 13  
+  Paginator pages  |  0  
+  Non-page files   |  0  
+  Static files     |  0  
+  Processed images |  0  
+  Aliases          |  0  
+  Sitemaps         |  1  
+  Cleaned          |  0  
+
+Total in 30 ms
+$ /acme-space% cd public/
+
+$ /acme-space/public% git add -A                 
+
+$ /acme-space/public% git commit -m &amp;#34;action test&amp;#34;
+[main 08e1d05] action test
+ 9 files changed, 157 insertions(+), 4 deletions(-)
+ create mode 100644 action-test/index.html
+ create mode 100644 post/action-test/index.html
+
+$ /acme-space/public% git push origin main       
+Enumerating objects: 27, done.
+Counting objects: 100% (27/27), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (16/16), 1.60 KiB | 1.60 MiB/s, done.
+Total 16 (delta 9), reused 0 (delta 0)
+remote: Resolving deltas: 100% (9/9), completed with 5 local objects.
+To github.com:acme-space/acme-space.github.io
+   cd8ede5..08e1d05  main -&amp;gt; main
+$ /acme-space/public% 
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     
