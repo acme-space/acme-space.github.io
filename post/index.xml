@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on ACME-SPACE</title>
-    <link>https://acme-space.github.io/tags/</link>
-    <description>Recent content in Tags on ACME-SPACE</description>
+    <title>Posts on ACME-SPACE</title>
+    <link>https://acme-space.github.io/post/</link>
+    <description>Recent content in Posts on ACME-SPACE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 17 Jan 2023 17:15:40 +0900</lastBuildDate>
     
-	<atom:link href="https://acme-space.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://acme-space.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     
