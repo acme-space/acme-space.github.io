@@ -20,7 +20,10 @@
       <pubDate>Tue, 17 Jan 2023 18:12:35 +0900</pubDate>
       
       <guid>https://acme-space.github.io/post/action-test/</guid>
-      <description>&lt;h3 id=&#34;steps&#34;&gt;steps&lt;/h3&gt;
+      <description>&lt;h3 id=&#34;reference&#34;&gt;Reference&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://zenn.dev/nikaera/articles/hugo-github-actions-for-github-pages&#34;&gt;https://zenn.dev/nikaera/articles/hugo-github-actions-for-github-pages&lt;/a&gt;
+&lt;a href=&#34;https://www.pseudoyu.com/en/2022/05/29/deploy_your_blog_using_hugo_and_github_action/&#34;&gt;https://www.pseudoyu.com/en/2022/05/29/deploy_your_blog_using_hugo_and_github_action/&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;steps&#34;&gt;steps&lt;/h3&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ /acme-space% hugo new action-test.md 
 Content &amp;#34;~/acme-space/content/action-test.md&amp;#34; created
 
@@ -64,32 +67,6 @@ To github.com:acme-space/acme-space.github.io
    cd8ede5..08e1d05  main -&amp;gt; main
 $ /acme-space/public% 
 &lt;/code&gt;&lt;/pre&gt;</description>
-    </item>
-    
-    
-    
-    <item>
-      <title>Test</title>
-      <link>https://acme-space.github.io/post/test/</link>
-      <pubDate>Tue, 17 Jan 2023 18:06:40 +0900</pubDate>
-      
-      <guid>https://acme-space.github.io/post/test/</guid>
-      <description>&lt;p&gt;This is test.&lt;/p&gt;
-</description>
-    </item>
-    
-    
-    
-    <item>
-      <title>Actions</title>
-      <link>https://acme-space.github.io/post/actions/</link>
-      <pubDate>Tue, 17 Jan 2023 17:50:18 +0900</pubDate>
-      
-      <guid>https://acme-space.github.io/post/actions/</guid>
-      <description>&lt;h3 id=&#34;reference&#34;&gt;Reference&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://zenn.dev/nikaera/articles/hugo-github-actions-for-github-pages&#34;&gt;https://zenn.dev/nikaera/articles/hugo-github-actions-for-github-pages&lt;/a&gt;
-&lt;a href=&#34;https://www.pseudoyu.com/en/2022/05/29/deploy_your_blog_using_hugo_and_github_action/&#34;&gt;https://www.pseudoyu.com/en/2022/05/29/deploy_your_blog_using_hugo_and_github_action/&lt;/a&gt;&lt;/p&gt;
-</description>
     </item>
     
     
