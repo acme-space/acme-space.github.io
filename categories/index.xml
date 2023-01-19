@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on ACME-SPACE</title>
-    <link>https://acme-space.github.io/categories/</link>
+    <link>https://acme-systems.space/categories/</link>
     <description>Recent content in Categories on ACME-SPACE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://acme-space.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://acme-systems.space/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -15,10 +15,10 @@
     
     <item>
       <title>Action Test</title>
-      <link>https://acme-space.github.io/post/action-test/</link>
+      <link>https://acme-systems.space/post/action-test/</link>
       <pubDate>Tue, 17 Jan 2023 18:12:35 +0900</pubDate>
       
-      <guid>https://acme-space.github.io/post/action-test/</guid>
+      <guid>https://acme-systems.space/post/action-test/</guid>
       <description>&lt;h3 id=&#34;reference&#34;&gt;Reference&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://zenn.dev/nikaera/articles/hugo-github-actions-for-github-pages&#34;&gt;https://zenn.dev/nikaera/articles/hugo-github-actions-for-github-pages&lt;/a&gt;
 &lt;a href=&#34;https://www.pseudoyu.com/en/2022/05/29/deploy_your_blog_using_hugo_and_github_action/&#34;&gt;https://www.pseudoyu.com/en/2022/05/29/deploy_your_blog_using_hugo_and_github_action/&lt;/a&gt;&lt;/p&gt;
@@ -72,10 +72,10 @@ $ /acme-space/public%
     
     <item>
       <title>Init Post</title>
-      <link>https://acme-space.github.io/post/init-post/</link>
+      <link>https://acme-systems.space/post/init-post/</link>
       <pubDate>Tue, 17 Jan 2023 17:15:40 +0900</pubDate>
       
-      <guid>https://acme-space.github.io/post/init-post/</guid>
+      <guid>https://acme-systems.space/post/init-post/</guid>
       <description>&lt;h3 id=&#34;midashi&#34;&gt;Midashi&lt;/h3&gt;
 &lt;p&gt;aaa&lt;/p&gt;
 &lt;h4 id=&#34;komidashi&#34;&gt;Komidashi&lt;/h4&gt;

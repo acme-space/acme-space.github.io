@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on ACME-SPACE</title>
-    <link>https://acme-systems.space/post/</link>
-    <description>Recent content in Posts on ACME-SPACE</description>
+    <title>Abouts on ACME-SPACE</title>
+    <link>https://acme-systems.space/about/</link>
+    <description>Recent content in Abouts on ACME-SPACE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Jan 2023 18:12:35 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 19 Jan 2023 10:03:51 +0900</lastBuildDate>
     
-	<atom:link href="https://acme-systems.space/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://acme-systems.space/about/index.xml" rel="self" type="application/rss+xml" />
     
     
     
