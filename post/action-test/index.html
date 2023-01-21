@@ -117,10 +117,15 @@
 </span></span></span></code></pre></div><h3 id="所要時間">所要時間</h3>
 <p>およそ1分弱</p>
 <h3 id="bash-script">Bash Script</h3>
+<p><code>public/</code> に行ったり<code>git</code>コマンドを複数叩く部分をまとめた。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>hugo -D -F
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> public
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">hugo -D -F
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> public/
 </span></span><span class="line"><span class="cl">git add -A
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;commit by sh&#34;</span>
+</span></span><span class="line"><span class="cl">git push origin main
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ..
 </span></span></code></pre></div></article>
 
         </main><footer id="footer">
