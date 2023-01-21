@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/style.min.css">
 
     <link rel="canonical" href="https://acme-systems.space/post/action-test/" />
-    <link rel="stylesheet" href="https://github.com/acme-space/acme-space.github.io/blob/main/css/syntax.css" />
+    <link rel="stylesheet" href="https://acme-systems.space/css/syntax.css" />
     <title>GitHub Actions Test</title>
 </head>
 <body><header id="banner">
@@ -37,11 +37,11 @@
 <a href="https://www.pseudoyu.com/en/2022/05/29/deploy_your_blog_using_hugo_and_github_action/">https://www.pseudoyu.com/en/2022/05/29/deploy_your_blog_using_hugo_and_github_action/</a></p>
 <h3 id="steps">Steps</h3>
 <h4 id="記事の作成">記事の作成</h4>
-<pre tabindex="0"><code>$ /acme-space% hugo new action-test.md 
-Content &#34;~/acme-space/content/action-test.md&#34; created
-
-$ /acme-space% vi content/post/action-test.md 
-</code></pre><h4 id="デプロイ">デプロイ</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-zsh" data-lang="zsh"><span class="line"><span class="cl">$ /acme-space% hugo new action-test.md 
+</span></span><span class="line"><span class="cl">Content <span class="s2">&#34;~/acme-space/content/action-test.md&#34;</span> created
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ /acme-space% vi content/post/action-test.md 
+</span></span></code></pre></div><h4 id="デプロイ">デプロイ</h4>
 <pre tabindex="0"><code>$ /acme-space% hugo -D -F                 
 Start building sites … 
 hugo v0.109.0+extended darwin/amd64 BuildDate=unknown
