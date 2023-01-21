@@ -115,9 +115,19 @@ jobs:
       
       <guid>https://acme-systems.space/post/init-post/</guid>
       <description>&lt;h3 id=&#34;midashi&#34;&gt;Midashi&lt;/h3&gt;
-&lt;p&gt;aaa&lt;/p&gt;
+&lt;p&gt;This is midashi.&lt;/p&gt;
 &lt;h4 id=&#34;komidashi&#34;&gt;Komidashi&lt;/h4&gt;
-</description>
+&lt;p&gt;This is komidashi.&lt;/p&gt;
+&lt;h3 id=&#34;quote-here&#34;&gt;Quote Here&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;How do we map the total creative output of a musician over his or her lifetime? One approach is to divide that output into distinctive periods. An example is the well-known three-period appraisal of Beethoven’s music: There is an early period where he is imitating, a second period of maturation in which he finds his own voice, and a third later period in which Beethoven transcends his own voice, forging yet another style. Does this method have any currency when it is applied to an improvising jazz musician?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;By Brad Mehldau - &lt;a href=&#34;https://www.bradmehldaumusic.com/carnegie-01&#34;&gt;Creativity in Beethoven and Coltrane&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;code-block&#34;&gt;Code Block&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;This is code block&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;fenced-code-block&#34;&gt;Fenced Code Block&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;console.log(&amp;#39;indented code block&amp;#39;)
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     
