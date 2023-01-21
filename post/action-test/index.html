@@ -37,12 +37,12 @@
 <a href="https://www.pseudoyu.com/en/2022/05/29/deploy_your_blog_using_hugo_and_github_action/">https://www.pseudoyu.com/en/2022/05/29/deploy_your_blog_using_hugo_and_github_action/</a></p>
 <h3 id="steps">Steps</h3>
 <h4 id="記事の作成">記事の作成</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">$</span> <span class="o">/</span><span class="nx">acme</span><span class="o">-</span><span class="nx">space</span><span class="o">%</span> <span class="nx">hugo</span> <span class="k">new</span> <span class="nx">action</span><span class="o">-</span><span class="nx">test</span><span class="p">.</span><span class="nx">md</span> 
-</span></span><span class="line"><span class="cl"><span class="nx">Content</span> <span class="s2">&#34;~/acme-space/content/action-test.md&#34;</span> <span class="nx">created</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ /acme-space% hugo new action-test.md 
+</span></span><span class="line"><span class="cl">Content <span class="s2">&#34;~/acme-space/content/action-test.md&#34;</span> created
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">$</span> <span class="o">/</span><span class="nx">acme</span><span class="o">-</span><span class="nx">space</span><span class="o">%</span> <span class="nx">vi</span> <span class="nx">content</span><span class="o">/</span><span class="nx">post</span><span class="o">/</span><span class="nx">action</span><span class="o">-</span><span class="nx">test</span><span class="p">.</span><span class="nx">md</span> 
+</span></span><span class="line"><span class="cl">$ /acme-space% vi content/post/action-test.md 
 </span></span></code></pre></div><h4 id="デプロイ">デプロイ</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ /acme-space% hugo -D -F                 
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ /acme-space% hugo -D -F                 
 </span></span><span class="line"><span class="cl">Start building sites … 
 </span></span><span class="line"><span class="cl">hugo v0.109.0+extended darwin/amd64 <span class="nv">BuildDate</span><span class="o">=</span>unknown
 </span></span><span class="line"><span class="cl">
