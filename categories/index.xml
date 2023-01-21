@@ -122,12 +122,16 @@ jobs:
 &lt;blockquote&gt;
 &lt;p&gt;How do we map the total creative output of a musician over his or her lifetime? One approach is to divide that output into distinctive periods. An example is the well-known three-period appraisal of Beethoven’s music: There is an early period where he is imitating, a second period of maturation in which he finds his own voice, and a third later period in which Beethoven transcends his own voice, forging yet another style. Does this method have any currency when it is applied to an improvising jazz musician?&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;h3 id=&#34;日本語&#34;&gt;日本語&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;音楽家の生涯に渡る創作活動の総量は、どのように図式化すればよいのだろうか。その一つの方法は、音楽家の創作活動を特徴的な期間に分けることである。例えば、ベートーヴェンの音楽は3つの時期に分けて評価されることがよく知られています。ベートーヴェンは、模倣の初期、自分の声を見つける成熟の第二期、そして自分の声を超越し、さらに別のスタイルを作り上げる後期の第三期に分かれている。この方法は、即興演奏をするジャズ・ミュージシャンに適用する場合、有効なのだろうか。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;By Brad Mehldau - &lt;a href=&#34;https://www.bradmehldaumusic.com/carnegie-01&#34;&gt;Creativity in Beethoven and Coltrane&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;code-block&#34;&gt;Code Block&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;This is code block&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;fenced-code-block&#34;&gt;Fenced Code Block&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;console.log(&amp;#39;indented code block&amp;#39;)
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;indented code block&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     
