@@ -114,7 +114,14 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">PUBLISH_DIR</span><span class="p">:</span><span class="w"> </span><span class="l">./public </span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">commit_message</span><span class="p">:</span><span class="w"> </span><span class="l">${{ github.event.head_commit.message }}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  
-</span></span></span></code></pre></div></article>
+</span></span></span></code></pre></div><h3 id="所要時間">所要時間</h3>
+<p>およそ1分弱</p>
+<h3 id="bash-script">Bash Script</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>hugo -D -F
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> public
+</span></span><span class="line"><span class="cl">git add -A
+</span></span></code></pre></div></article>
 
         </main><footer id="footer">
     Copyright © 2023 ACME-SPACE
