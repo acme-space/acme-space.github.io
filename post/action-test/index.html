@@ -29,16 +29,19 @@
         <div>
                 <time>January 17, 2023</time>
             </div>
-    </header><h3 id="reference">Reference</h3>
+    </header><h3 id="やりたいこと">やりたいこと</h3>
+<p>GitHub Actions による Hugo デプロイの動作確認</p>
+<h3 id="reference">Reference</h3>
 <p><a href="https://zenn.dev/nikaera/articles/hugo-github-actions-for-github-pages">https://zenn.dev/nikaera/articles/hugo-github-actions-for-github-pages</a>
 <a href="https://www.pseudoyu.com/en/2022/05/29/deploy_your_blog_using_hugo_and_github_action/">https://www.pseudoyu.com/en/2022/05/29/deploy_your_blog_using_hugo_and_github_action/</a></p>
-<h3 id="steps">steps</h3>
+<h3 id="steps">Steps</h3>
+<h4 id="記事の作成">記事の作成</h4>
 <pre tabindex="0"><code>$ /acme-space% hugo new action-test.md 
 Content &#34;~/acme-space/content/action-test.md&#34; created
 
 $ /acme-space% vi content/post/action-test.md 
-
-$ /acme-space% hugo -D -F                 
+</code></pre><h4 id="デプロイ">デプロイ</h4>
+<pre tabindex="0"><code>$ /acme-space% hugo -D -F                 
 Start building sites … 
 hugo v0.109.0+extended darwin/amd64 BuildDate=unknown
 
@@ -54,7 +57,8 @@ hugo v0.109.0+extended darwin/amd64 BuildDate=unknown
   Cleaned          |  0  
 
 Total in 30 ms
-$ /acme-space% cd public/
+</code></pre><h4 id="git">Git</h4>
+<pre tabindex="0"><code>$ /acme-space% cd public/
 
 $ /acme-space/public% git add -A                 
 
@@ -74,7 +78,41 @@ Total 16 (delta 9), reused 0 (delta 0)
 remote: Resolving deltas: 100% (9/9), completed with 5 local objects.
 To github.com:acme-space/acme-space.github.io
    cd8ede5..08e1d05  main -&gt; main
-$ /acme-space/public% 
+</code></pre><h3 id="workflow-ファイル">Workflow ファイル</h3>
+<pre tabindex="0"><code>cat .github/workflows/gh-pages.yml
+name: github pages
+
+on:
+  push:
+    branches:
+      - main  # Set a branch name to trigger deployment
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: &#39;latest&#39;
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          PERSONAL_TOKEN: ${{ secrets.MY_GITHUB_ACCESS_TOKEN }}
+          EXTERNAL_REPOSITORY: acme-space/acme-space.github.io
+          PUBLISH_BRANCH: main
+          PUBLISH_DIR: ./public 
+          commit_message: ${{ github.event.head_commit.message }}
+  
 </code></pre></article>
 
         </main><footer id="footer">

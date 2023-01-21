@@ -20,16 +20,19 @@
       <pubDate>Tue, 17 Jan 2023 18:12:35 +0900</pubDate>
       
       <guid>https://acme-systems.space/post/action-test/</guid>
-      <description>&lt;h3 id=&#34;reference&#34;&gt;Reference&lt;/h3&gt;
+      <description>&lt;h3 id=&#34;やりたいこと&#34;&gt;やりたいこと&lt;/h3&gt;
+&lt;p&gt;GitHub Actions による Hugo デプロイの動作確認&lt;/p&gt;
+&lt;h3 id=&#34;reference&#34;&gt;Reference&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://zenn.dev/nikaera/articles/hugo-github-actions-for-github-pages&#34;&gt;https://zenn.dev/nikaera/articles/hugo-github-actions-for-github-pages&lt;/a&gt;
 &lt;a href=&#34;https://www.pseudoyu.com/en/2022/05/29/deploy_your_blog_using_hugo_and_github_action/&#34;&gt;https://www.pseudoyu.com/en/2022/05/29/deploy_your_blog_using_hugo_and_github_action/&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;steps&#34;&gt;steps&lt;/h3&gt;
+&lt;h3 id=&#34;steps&#34;&gt;Steps&lt;/h3&gt;
+&lt;h4 id=&#34;記事の作成&#34;&gt;記事の作成&lt;/h4&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ /acme-space% hugo new action-test.md 
 Content &amp;#34;~/acme-space/content/action-test.md&amp;#34; created
 
 $ /acme-space% vi content/post/action-test.md 
-
-$ /acme-space% hugo -D -F                 
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;デプロイ&#34;&gt;デプロイ&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ /acme-space% hugo -D -F                 
 Start building sites … 
 hugo v0.109.0+extended darwin/amd64 BuildDate=unknown
 
@@ -45,7 +48,8 @@ hugo v0.109.0+extended darwin/amd64 BuildDate=unknown
   Cleaned          |  0  
 
 Total in 30 ms
-$ /acme-space% cd public/
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;git&#34;&gt;Git&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ /acme-space% cd public/
 
 $ /acme-space/public% git add -A                 
 
@@ -65,7 +69,41 @@ Total 16 (delta 9), reused 0 (delta 0)
 remote: Resolving deltas: 100% (9/9), completed with 5 local objects.
 To github.com:acme-space/acme-space.github.io
    cd8ede5..08e1d05  main -&amp;gt; main
-$ /acme-space/public% 
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;workflow-ファイル&#34;&gt;Workflow ファイル&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cat .github/workflows/gh-pages.yml
+name: github pages
+
+on:
+  push:
+    branches:
+      - main  # Set a branch name to trigger deployment
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: &amp;#39;latest&amp;#39;
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          PERSONAL_TOKEN: ${{ secrets.MY_GITHUB_ACCESS_TOKEN }}
+          EXTERNAL_REPOSITORY: acme-space/acme-space.github.io
+          PUBLISH_BRANCH: main
+          PUBLISH_DIR: ./public 
+          commit_message: ${{ github.event.head_commit.message }}
+  
 &lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
