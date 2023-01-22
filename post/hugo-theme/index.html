@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/style.min.css">
 
     <link rel="canonical" href="https://acme-systems.space/post/hugo-theme/" />
-    <link rel="stylesheet" href="https://acme-systems.space/css/styles.css" />
+    <link rel="stylesheet" href="https://acme-systems.space/css/syntax.css" />
     <title>Hugo Theme のカスタマイズ</title>
 </head>
 <body><header id="banner">
@@ -38,7 +38,7 @@
 </span></span><span class="line"><span class="cl">touch static/css/syntax.css
 </span></span><span class="line"><span class="cl">hugo gen chromastyles --style<span class="o">=</span>github &gt; ./static/css/syntax.css
 </span></span></code></pre></div><p>つぎに <code>themes/etch/layouts/partials/head.html</code> の中に</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">&lt;link <span class="nv">rel</span><span class="o">=</span><span class="s2">&#34;stylesheet&#34;</span> <span class="nv">href</span><span class="o">=</span><span class="s2">&#34;{{ &#34;</span>/css/styles.css<span class="s2">&#34; | absURL }}&#34;</span> /&gt; 
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">&lt;link <span class="nv">rel</span><span class="o">=</span><span class="s2">&#34;stylesheet&#34;</span> <span class="nv">href</span><span class="o">=</span><span class="s2">&#34;{{ &#34;</span>/css/syntax.css<span class="s2">&#34; | absURL }}&#34;</span> /&gt; 
 </span></span></code></pre></div><p>を追記して完了。</p>
 </article>
 
