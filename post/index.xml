@@ -20,6 +20,7 @@
       <guid>https://acme-systems.space/post/hugo-theme/</guid>
       <description>&lt;h3 id=&#34;hugo-theme&#34;&gt;Hugo Theme&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://themes.gohugo.io/themes/etch/&#34;&gt;https://themes.gohugo.io/themes/etch/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.blackcoffy.net/posts/hugo-highlightjs&#34;&gt;https://blog.blackcoffy.net/posts/hugo-highlightjs&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;syntax-highlight-の有効化&#34;&gt;Syntax Highlight の有効化&lt;/h3&gt;
 &lt;p&gt;まず &lt;code&gt;syntax.css&lt;/code&gt; を作成する。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir static/css
