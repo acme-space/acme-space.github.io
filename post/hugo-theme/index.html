@@ -32,16 +32,17 @@
                 <time>January 21, 2023</time>
             </div>
     </header><h3 id="hugo-theme">Hugo Theme</h3>
-<p><a href="https://themes.gohugo.io/themes/etch/">https://themes.gohugo.io/themes/etch/</a></p>
-<p><a href="https://blog.blackcoffy.net/posts/hugo-highlightjs">https://blog.blackcoffy.net/posts/hugo-highlightjs</a></p>
+<p>ETCH:
+<a href="https://themes.gohugo.io/themes/etch/">https://themes.gohugo.io/themes/etch/</a></p>
 <h3 id="syntax-highlight-の有効化">Syntax Highlight の有効化</h3>
-<p>まず <code>syntax.css</code> を作成する。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">mkdir static/css
-</span></span><span class="line"><span class="cl">touch static/css/syntax.css
-</span></span><span class="line"><span class="cl">hugo gen chromastyles --style<span class="o">=</span>github &gt; ./static/css/syntax.css
-</span></span></code></pre></div><p>つぎに <code>themes/etch/layouts/partials/head.html</code> の中に</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&lt;link <span class="nv">rel</span><span class="o">=</span><span class="s2">&#34;stylesheet&#34;</span> <span class="nv">href</span><span class="o">=</span><span class="s2">&#34;{{ &#34;</span>/css/syntax.css<span class="s2">&#34; | absURL }}&#34;</span> /&gt; 
-</span></span></code></pre></div><p>を追記して完了。</p>
+<p>github を見る限り <code>assets/css</code> 配下に css が用意されていた。
+<a href="https://github.com/LukasJoswiak/etch/tree/master/assets/css">https://github.com/LukasJoswiak/etch/tree/master/assets/css</a></p>
+<p><a href="https://github.com/LukasJoswiak/etch/wiki/Configuration#sample-configuration">サンプルコンフィグ</a>の <code>  highlight = true</code> を利用しても読み込まれていなかったため、
+該当するファイルを <code>static/css</code> 配下にコピーした。</p>
+<pre tabindex="0"><code>mkdir static/css
+acme-space% cp themes/etch/assets/css/* static/css/
+</code></pre><p>スタイルを変えたい場合は <code>hugo gen chromastyles --style=vs &gt; ./static/css/syntax.css</code>
+のようにする。</p>
 </article>
 
         </main><footer id="footer">

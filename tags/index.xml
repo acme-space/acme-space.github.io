@@ -18,16 +18,17 @@
       
       <guid>https://acme-systems.space/post/hugo-theme/</guid>
       <description>&lt;h3 id=&#34;hugo-theme&#34;&gt;Hugo Theme&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://themes.gohugo.io/themes/etch/&#34;&gt;https://themes.gohugo.io/themes/etch/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://blog.blackcoffy.net/posts/hugo-highlightjs&#34;&gt;https://blog.blackcoffy.net/posts/hugo-highlightjs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;ETCH:
+&lt;a href=&#34;https://themes.gohugo.io/themes/etch/&#34;&gt;https://themes.gohugo.io/themes/etch/&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;syntax-highlight-の有効化&#34;&gt;Syntax Highlight の有効化&lt;/h3&gt;
-&lt;p&gt;まず &lt;code&gt;syntax.css&lt;/code&gt; を作成する。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir static/css
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;touch static/css/syntax.css
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo gen chromastyles --style&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;github &amp;gt; ./static/css/syntax.css
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;つぎに &lt;code&gt;themes/etch/layouts/partials/head.html&lt;/code&gt; の中に&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;link &lt;span class=&#34;nv&#34;&gt;rel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;stylesheet&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;{{ &amp;#34;&lt;/span&gt;/css/syntax.css&lt;span class=&#34;s2&#34;&gt;&amp;#34; | absURL }}&amp;#34;&lt;/span&gt; /&amp;gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;を追記して完了。&lt;/p&gt;
+&lt;p&gt;github を見る限り &lt;code&gt;assets/css&lt;/code&gt; 配下に css が用意されていた。
+&lt;a href=&#34;https://github.com/LukasJoswiak/etch/tree/master/assets/css&#34;&gt;https://github.com/LukasJoswiak/etch/tree/master/assets/css&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/LukasJoswiak/etch/wiki/Configuration#sample-configuration&#34;&gt;サンプルコンフィグ&lt;/a&gt;の &lt;code&gt;  highlight = true&lt;/code&gt; を利用しても読み込まれていなかったため、
+該当するファイルを &lt;code&gt;static/css&lt;/code&gt; 配下にコピーした。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mkdir static/css
+acme-space% cp themes/etch/assets/css/* static/css/
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;スタイルを変えたい場合は &lt;code&gt;hugo gen chromastyles --style=vs &amp;gt; ./static/css/syntax.css&lt;/code&gt;
+のようにする。&lt;/p&gt;
 </description>
     </item>
     
