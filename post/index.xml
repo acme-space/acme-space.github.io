@@ -26,9 +26,9 @@
 &lt;a href=&#34;https://github.com/LukasJoswiak/etch/tree/master/assets/css&#34;&gt;https://github.com/LukasJoswiak/etch/tree/master/assets/css&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/LukasJoswiak/etch/wiki/Configuration#sample-configuration&#34;&gt;サンプルコンフィグ&lt;/a&gt;の &lt;code&gt;  highlight = true&lt;/code&gt; を利用しても読み込まれていなかったため、
 該当するファイルを &lt;code&gt;static/css&lt;/code&gt; 配下にコピーした。&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mkdir static/css
-acme-space% cp themes/etch/assets/css/* static/css/
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;スタイルを変えたい場合は &lt;code&gt;hugo gen chromastyles --style=vs &amp;gt; ./static/css/syntax.css&lt;/code&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir static/css
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;acme-space% cp themes/etch/assets/css/* static/css/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;スタイルを変えたい場合は &lt;code&gt;hugo gen chromastyles --style=vs &amp;gt; ./static/css/syntax.css&lt;/code&gt;
 のようにする。&lt;/p&gt;
 </description>
     </item>
@@ -166,8 +166,8 @@ acme-space% cp themes/etch/assets/css/* static/css/
 &lt;h3 id=&#34;code-block&#34;&gt;Code Block&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;This is code block&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;fenced-code-block&#34;&gt;Fenced Code Block&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;console.log(&amp;#39;indented code block&amp;#39;)
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;console.log&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;indented code block&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     
