@@ -34,11 +34,11 @@
 <p><a href="https://themes.gohugo.io/themes/etch/">https://themes.gohugo.io/themes/etch/</a></p>
 <h3 id="syntax-highlight-の有効化">Syntax Highlight の有効化</h3>
 <p>まず <code>syntax.css</code> を作成する。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">mkdir static/css
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">mkdir static/css
 </span></span><span class="line"><span class="cl">touch static/css/syntax.css
 </span></span><span class="line"><span class="cl">hugo gen chromastyles --style<span class="o">=</span>github &gt; ./static/css/syntax.css
 </span></span></code></pre></div><p>つぎに <code>themes/etch/layouts/partials/head.html</code> の中に</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">&lt;link <span class="nv">rel</span><span class="o">=</span><span class="s2">&#34;stylesheet&#34;</span> <span class="nv">href</span><span class="o">=</span><span class="s2">&#34;{{ &#34;</span>/css/syntax.css<span class="s2">&#34; | absURL }}&#34;</span> /&gt; 
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&lt;link <span class="nv">rel</span><span class="o">=</span><span class="s2">&#34;stylesheet&#34;</span> <span class="nv">href</span><span class="o">=</span><span class="s2">&#34;{{ &#34;</span>/css/syntax.css<span class="s2">&#34; | absURL }}&#34;</span> /&gt; 
 </span></span></code></pre></div><p>を追記して完了。</p>
 </article>
 
