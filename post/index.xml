@@ -6,9 +6,88 @@
     <description>Recent content in Posts on ACME-SPACE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 21 Jan 2023 15:35:06 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 23 Jan 2023 23:53:37 +0900</lastBuildDate>
     
 	<atom:link href="https://acme-systems.space/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    <item>
+      <title>Download Youtube with yt-dlp</title>
+      <link>https://acme-systems.space/post/download-youtube/</link>
+      <pubDate>Mon, 23 Jan 2023 23:53:37 +0900</pubDate>
+      
+      <guid>https://acme-systems.space/post/download-youtube/</guid>
+      <description>&lt;h3 id=&#34;goal&#34;&gt;Goal&lt;/h3&gt;
+&lt;p&gt;Download youtube music as mp3 with ID3 tag information!&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;h3 id=&#34;prep&#34;&gt;Prep&lt;/h3&gt;
+&lt;p&gt;(mac OSX, Python3)
+・Install &lt;a href=&#34;https://github.com/yt-dlp/yt-dlp&#34;&gt;yt-dlp&lt;/a&gt;
+・Install &lt;a href=&#34;https://ffmpeg.org/download.html&#34;&gt;ffmpeg&lt;/a&gt;
+・pip3 install mutagen (&lt;a href=&#34;https://note.nkmk.me/python-mutagen-mp3-id3/&#34;&gt;reference&lt;/a&gt;)&lt;/p&gt;
+&lt;h3 id=&#34;script&#34;&gt;Script&lt;/h3&gt;
+&lt;p&gt;Create a script as following, and specify the URL of Youtube you want to download as a parameter $1&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ cat dl-youtube.sh 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#!/bin/bash&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;@
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; -p &lt;span class=&#34;s2&#34;&gt;&amp;#34;Enter title: &amp;#34;&lt;/span&gt; title
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; -p &lt;span class=&#34;s2&#34;&gt;&amp;#34;Enter artist: &amp;#34;&lt;/span&gt; artist
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; -p &lt;span class=&#34;s2&#34;&gt;&amp;#34;Enter album: &amp;#34;&lt;/span&gt; album
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; -p &lt;span class=&#34;s2&#34;&gt;&amp;#34;Enter filename: &amp;#34;&lt;/span&gt; filename
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yt-dlp -x -f &lt;span class=&#34;s2&#34;&gt;&amp;#34;ba[ext=webm]&amp;#34;&lt;/span&gt; --audio-format m4a &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt; -o  &lt;span class=&#34;s2&#34;&gt;&amp;#34;input-youtube.m4a&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ffmpeg -i input-youtube.m4a -ab 256k output.mp3
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python3 id3-edit-argparse.py -t &lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;  -a &lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;artist&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt; -b &lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;album&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt; -f &lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;filename&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm input-youtube.m4a
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;how-it-works&#34;&gt;How it works&lt;/h3&gt;
+&lt;p&gt;The following four tasks are performed in conjunction with each other&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;drop the file as mp4 with youdube-dl with the best quality &amp;amp; sound quality&lt;/li&gt;
+&lt;li&gt;convert mp4 to mp3 with audio bitrate 256k using ffmpeg&lt;/li&gt;
+&lt;li&gt;edit id3 tags&lt;/li&gt;
+&lt;li&gt;delete intermediate files&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;id3-tagging&#34;&gt;id3 tagging&lt;/h4&gt;
+&lt;p&gt;I referred to this article so that I could embed only elements that I might use in my searches.
+&lt;code&gt;output.mp3&lt;/code&gt; is the temporary name of the file generated by ffmpeg.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://note.nkmk.me/python-mutagen-mp3-id3/&#34;&gt;https://note.nkmk.me/python-mutagen-mp3-id3/&lt;/a&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ cat id3-edit-argparse.py 
+from mutagen.easyid3 import EasyID3
+import argparse
+import os
+
+parser = argparse.ArgumentParser(description=&amp;#39;add id3 tags&amp;#39;)
+parser.add_argument(&amp;#39;-t&amp;#39;, &amp;#39;--title&amp;#39;, help=&amp;#39;title&amp;#39;, type=str, required=True) 
+parser.add_argument(&amp;#39;-a&amp;#39;, &amp;#39;--artist&amp;#39;, help=&amp;#39;artist&amp;#39;, type=str, required=True) 
+parser.add_argument(&amp;#39;-b&amp;#39;, &amp;#39;--album&amp;#39;, help=&amp;#39;album&amp;#39;, type=str, default=&amp;#39;Youtube&amp;#39;) 
+parser.add_argument(&amp;#39;-f&amp;#39;, &amp;#39;--filename&amp;#39;, help=&amp;#39;filename&amp;#39;, type=str, required=True) 
+
+args = parser.parse_args()
+
+path = &amp;#39;output.mp3&amp;#39;
+tags = EasyID3(path)
+tags[&amp;#39;title&amp;#39;] = args.title
+tags[&amp;#39;artist&amp;#39;] = args.artist
+tags[&amp;#39;album&amp;#39;] = args.album
+tags.save()
+
+print(tags.pprint())
+newfilename = args.filename + &amp;#39;.mp3&amp;#39;
+os.rename(&amp;#39;output.mp3&amp;#39;, newfilename)
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;demo&#34;&gt;Demo&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sh dl-youtube.sh &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://www.youtube.com/watch?v=OTvlQRgFZ6k&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;（snip）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Enter title:Live Under The Sky &lt;span class=&#34;s1&#34;&gt;&amp;#39;81
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;Enter artist=Chick Corea, Eddie Gomez, Michael Brecker, Roy Haynes
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;Enter title=Live Under The Sky &amp;#39;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;81&lt;/span&gt; Chick Corea July &lt;span class=&#34;m&#34;&gt;23&lt;/span&gt; ,1981
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Enter new filename: Live-under-the-sky-81.mp3
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;✋&lt;/p&gt;
+&lt;iframe sandbox=&#34;allow-popups allow-scripts allow-modals allow-forms allow-same-origin&#34; style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=fascinated-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B099C8R217&amp;linkId=e486c7e06869a1ae5e845a784605c032&#34;&gt;&lt;/iframe&gt;
+</description>
+    </item>
     
     
     
