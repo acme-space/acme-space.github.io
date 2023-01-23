@@ -22,10 +22,10 @@
 &lt;p&gt;Download youtube music as mp3 with ID3 tag information!&lt;/p&gt;
 &lt;!-- more --&gt;
 &lt;h3 id=&#34;prep&#34;&gt;Prep&lt;/h3&gt;
-&lt;p&gt;(mac OSX, Python3)
+&lt;p&gt;(mac OSX, Python3)&lt;br&gt;
 ・Install &lt;a href=&#34;https://github.com/yt-dlp/yt-dlp&#34;&gt;yt-dlp&lt;/a&gt;&lt;br&gt;
 ・Install &lt;a href=&#34;https://ffmpeg.org/download.html&#34;&gt;ffmpeg&lt;/a&gt;&lt;br&gt;
-・pip3 install mutagen (&lt;a href=&#34;https://note.nkmk.me/python-mutagen-mp3-id3/&#34;&gt;reference&lt;/a&gt;)&lt;/p&gt;
+・Install mutagen (&lt;a href=&#34;https://note.nkmk.me/python-mutagen-mp3-id3/&#34;&gt;reference&lt;/a&gt;)&lt;/p&gt;
 &lt;h3 id=&#34;script&#34;&gt;Script&lt;/h3&gt;
 &lt;p&gt;Create a script as following, and specify the URL of Youtube you want to download as a parameter $1&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ cat dl-youtube.sh 
