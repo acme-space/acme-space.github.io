@@ -13,7 +13,7 @@
     
     
     <item>
-      <title>Tailwind はおうちクラウドとの相性が抜群</title>
+      <title>Tailwind はおうちクラウドとの相性がよい</title>
       <link>https://acme-systems.space/post/tailwind/</link>
       <pubDate>Fri, 27 Jan 2023 18:54:57 +0900</pubDate>
       
@@ -29,7 +29,8 @@ OSS の VPN ソフトウェアであり、Linux のカーネルモジュール�
 &lt;h3 id=&#34;その他の利用方法&#34;&gt;その他の利用方法&lt;/h3&gt;
 &lt;p&gt;私は利用していないがメジャーな NAS である &lt;a href=&#34;https://internet.watch.impress.co.jp/docs/column/shimizu/1313903.html&#34;&gt;QNAP も対応&lt;/a&gt;しており、VPN をほぼ意識せずに外出先からも自宅のファイルを閲覧できると
 いった用途が人気ありそう。
-IP の Exit として使ったり、他の人とマシン共有する用途があるようだが今の所必要性を感じていない。&lt;/p&gt;
+&lt;a href=&#34;https://tailscale.com/kb/1018/acls/&#34;&gt;ACL によるアクセス制御&lt;/a&gt;もできるがいまは P2P での利用が主で使っていない。NW 単位で利用し始めることがあったら必須の機能となる。
+IP の秘匿や Geo Location 変更のために &lt;a href=&#34;https://tailscale.com/kb/1103/exit-nodes/&#34;&gt;Exit Node&lt;/a&gt; として使ったり、他の人とマシン共有する用途があるようだが今の個人でひっそり使うだけで必要性を感じていない。&lt;/p&gt;
 </description>
     </item>
     
