@@ -6,9 +6,31 @@
     <description>Recent content on ACME-SPACE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Jan 2023 23:53:37 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 27 Jan 2023 18:54:57 +0900</lastBuildDate>
     
 	<atom:link href="https://acme-systems.space/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    <item>
+      <title>Tailwind はおうちクラウドとの相性が抜群</title>
+      <link>https://acme-systems.space/post/tailwind/</link>
+      <pubDate>Fri, 27 Jan 2023 18:54:57 +0900</pubDate>
+      
+      <guid>https://acme-systems.space/post/tailwind/</guid>
+      <description>&lt;h3 id=&#34;tailwindhttpstailscalecom-という&#34;&gt;&lt;a href=&#34;https://tailscale.com/&#34;&gt;Tailwind&lt;/a&gt; という&lt;/h3&gt;
+&lt;p&gt;ものを使い始めてみた。
+OSS の VPN ソフトウェアであり、Linux のカーネルモジュールとしても動作する  &lt;a href=&#34;https://www.wireguard.com/&#34;&gt;WireGuard&lt;/a&gt; をベースとしたサービスであり、ただでさえ簡単な WireGuard をゼロコンフィグ化したものと言ってよいだろう。&lt;/p&gt;
+&lt;p&gt;私は利用していないがメジャーな NAS である QNAP も対応しており、VPN をほぼ意識せずに外出先からも自宅のファイルを閲覧できるといった用途が考えられる。&lt;/p&gt;
+&lt;p&gt;トロントのスタートアップ企業で、&lt;a href=&#34;https://techcrunch.com/2020/11/10/tailscale-raises-12-million-for-its-wireguard-based-corporate-vpn/&#34;&gt;techcrunch&lt;/a&gt;によると2020年に12億円の資金調達をしている。VPN 界隈のサービスは攻撃や IP 偽装などで利用されているケースが多く正直印象が良くないが、Tailscale はゼロトラストを実現する方法としてエンタープライズ向けのクリーンなイメージが特長かもしれない。&lt;/p&gt;
+&lt;h3 id=&#34;わがやの利用方法&#34;&gt;わがやの利用方法&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://emby.media/&#34;&gt;Emby&lt;/a&gt; というメディアサーバを使って Spotify にないような音源を聴いてる。
+いままでは家のルータで PAT の設定をして自宅のマシンを曝していたが、Tailwind ではその設定が不要となる。体感でしかないが遅延の差などない。&lt;/p&gt;
+&lt;p&gt;あとは楽譜 PDF ファイルの閲覧などをタブレットでスムーズに行いたいときに SMB クライアントのアプリから直接操作できる点も気に入っている。&lt;/p&gt;
+&lt;h3 id=&#34;その他の利用方法&#34;&gt;その他の利用方法&lt;/h3&gt;
+&lt;p&gt;IP の Exit として使ったり、他の人とマシン共有する用途があるようだが今の所必要性を感じていない。&lt;/p&gt;
+</description>
+    </item>
     
     
     
