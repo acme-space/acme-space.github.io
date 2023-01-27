@@ -14,10 +14,10 @@
     
     <item>
       <title>Tailwind はおうちクラウドとの相性がよい</title>
-      <link>https://acme-systems.space/post/tailwind/</link>
+      <link>https://acme-systems.space/post/tailscale/</link>
       <pubDate>Fri, 27 Jan 2023 18:54:57 +0900</pubDate>
       
-      <guid>https://acme-systems.space/post/tailwind/</guid>
+      <guid>https://acme-systems.space/post/tailscale/</guid>
       <description>&lt;h3 id=&#34;tailwindhttpstailscalecom-という&#34;&gt;&lt;a href=&#34;https://tailscale.com/&#34;&gt;Tailwind&lt;/a&gt; という&lt;/h3&gt;
 &lt;p&gt;ものを使い始めてみた。
 OSS の VPN ソフトウェアであり、Linux のカーネルモジュールとしても動作する  &lt;a href=&#34;https://www.wireguard.com/&#34;&gt;WireGuard&lt;/a&gt; をベースとしたサービスであり、ただでさえ簡単な WireGuard をゼロコンフィグ化したものと言ってよいだろう。&lt;/p&gt;
