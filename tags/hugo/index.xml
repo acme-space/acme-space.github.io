@@ -19,18 +19,19 @@
       
       <guid>https://acme-systems.space/post/tailscale/</guid>
       <description>&lt;h3 id=&#34;tailwindhttpstailscalecom-という&#34;&gt;&lt;a href=&#34;https://tailscale.com/&#34;&gt;Tailwind&lt;/a&gt; という&lt;/h3&gt;
-&lt;p&gt;ものを使い始めてみた。
+&lt;p&gt;ものを使い始めてみた。&lt;br&gt;
 OSS の VPN ソフトウェアであり、Linux のカーネルモジュールとしても動作する  &lt;a href=&#34;https://www.wireguard.com/&#34;&gt;WireGuard&lt;/a&gt; をベースとしたサービスであり、ただでさえ簡単な WireGuard をゼロコンフィグ化したものと言ってよいだろう。&lt;/p&gt;
-&lt;p&gt;Tailwind はトロントのスタートアップ企業で、&lt;a href=&#34;https://techcrunch.com/2020/11/10/tailscale-raises-12-million-for-its-wireguard-based-corporate-vpn/&#34;&gt;techcrunch&lt;/a&gt; によると2020年に12億円の資金調達をしている。VPN 界隈のサービスは攻撃や IP 偽装などで利用されているケースが多く正直印象が良くないが、Tailscale はゼロトラストを実現する方法としてエンタープライズ向けのクリーンなイメージが特長かもしれない。&lt;/p&gt;
+&lt;p&gt;Tailwind はトロントのスタートアップ企業で、&lt;a href=&#34;https://techcrunch.com/2020/11/10/tailscale-raises-12-million-for-its-wireguard-based-corporate-vpn/&#34;&gt;techcrunch&lt;/a&gt; によると2020年に12億円の資金調達をしている。&lt;/p&gt;
+&lt;p&gt;VPN 界隈のサービスは攻撃や IP 偽装などで利用されているケースが多く正直印象が良くないが、Tailscale はゼロトラストを実現する方法としてエンタープライズ向けのクリーンなイメージが特長かもしれない。&lt;/p&gt;
 &lt;h3 id=&#34;わがやの利用方法&#34;&gt;わがやの利用方法&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://emby.media/&#34;&gt;Emby&lt;/a&gt; というメディアサーバを使って Spotify にないような音源を聴いてる。
+&lt;p&gt;&lt;a href=&#34;https://emby.media/&#34;&gt;Emby&lt;/a&gt; というメディアサーバを使って Spotify にないような音源を聴いてる。&lt;br&gt;
 いままでは家のルータで PAT の設定をして自宅のマシンを曝していたが、Tailwind ではその設定が不要となる。体感でしかないが遅延の差はない。&lt;/p&gt;
 &lt;p&gt;あとは楽譜 PDF ファイルの閲覧などをタブレットでスムーズに行いたいときに SMB クライアントのアプリから直接操作できる点も気に入っている。&lt;/p&gt;
 &lt;h3 id=&#34;その他の利用方法&#34;&gt;その他の利用方法&lt;/h3&gt;
 &lt;p&gt;私は利用していないがメジャーな NAS である &lt;a href=&#34;https://internet.watch.impress.co.jp/docs/column/shimizu/1313903.html&#34;&gt;QNAP も対応&lt;/a&gt;しており、VPN をほぼ意識せずに外出先からも自宅のファイルを閲覧できると
-いった用途が人気ありそう。
-&lt;a href=&#34;https://tailscale.com/kb/1018/acls/&#34;&gt;ACL によるアクセス制御&lt;/a&gt;もできるがいまは P2P での利用が主で使っていない。NW 単位で利用し始めることがあったら必須の機能となる。
-IP の秘匿や Geo Location 変更のために &lt;a href=&#34;https://tailscale.com/kb/1103/exit-nodes/&#34;&gt;Exit Node&lt;/a&gt; として使ったり、他の人とマシン共有する用途があるようだが今の個人でひっそり使うだけで必要性を感じていない。&lt;/p&gt;
+いった用途が人気ありそう。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://tailscale.com/kb/1018/acls/&#34;&gt;ACL によるアクセス制御&lt;/a&gt;もできるがいまは P2P での利用が主で使っていない。NW 単位で利用し始めることがあったら必須の機能となる。&lt;/p&gt;
+&lt;p&gt;IP の秘匿や Geo Location 変更のために &lt;a href=&#34;https://tailscale.com/kb/1103/exit-nodes/&#34;&gt;Exit Node&lt;/a&gt; として使ったり、他の人とマシン共有する用途があるようだが今の個人でひっそり使うだけで必要性を感じていない。&lt;/p&gt;
 </description>
     </item>
     
